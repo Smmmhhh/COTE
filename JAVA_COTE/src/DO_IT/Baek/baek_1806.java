@@ -1,4 +1,6 @@
 package DO_IT.Baek;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class baek_1806 {
 
@@ -23,15 +25,49 @@ public class baek_1806 {
 
 <예제 출력>
 2
+
 */
 		
-		
-		
-		
-		
-		
-		
-		
+	// <접근방법>
+	// 1. 100,000,000 까지 데이터를 입력받을 수 있으니, 투 포인터 알고리즘을 활용해서
+	//	  n(log) 시간 알고리즘을 사용해야한다. 
+	
+	Scanner sc = new Scanner(System.in);
+	//수열의 갯수, 합을 입력받는다.
+	
+	long N, S;
+	N = sc.nextLong();	S = sc.nextLong();
+	long[] a_arr = new long[(int) N + 1];
+	
+	//N만큼의 수열을 a_arr에 입력받는다.
+	for(int i = 0; i < N; i++) {
+		a_arr[i] = sc.nextInt();
+	}
+	
+	// 오름차순 정렬
+	Arrays.sort(a_arr);
+
+	long sum = 0;
+	int start = 0;
+	int end = 0;
+	int length = 0;
+	int min = Integer.MAX_VALUE;
+	
+	while(end <= N) {
+		//sum이 입력받은 최댓값보다 작다면 배열의 값을 하나씩 올려주며 end변수에 넣어준다.
+		if(sum < S) {
+			sum = sum + a_arr[end++];	
+		}else if(sum >= S) {
+			sum = sum - a_arr[start++];		//최소길이를 찾기 위해서 배열값을 하나씩 올리며 sum에서 값을 빼줌
+			length = end - start + 1;	//end에서 start를 빼줘서 길이값을 구한다.(문제에서 index는 1을 기준으로 보고있음) 
+			if(min > length) min = length;
+		}			
+	}
+	
+	System.out.println(min);
+	
+
+	
 		
 	}
 
