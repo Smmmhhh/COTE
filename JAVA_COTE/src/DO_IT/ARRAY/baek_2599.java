@@ -65,7 +65,7 @@ public class baek_2599 {
 			
 			int N = sc.nextInt();
 			int K = sc.nextInt();
-			int[] a_arr = new int[N];
+			int[] a_arr = new int[N+1];
 			int max = Integer.MIN_VALUE;
 			
 			// 날짜별 온도 입력받기
