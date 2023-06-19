@@ -49,7 +49,7 @@ public class baek_2599 {
 			// < 접근방법 > 
 			// 1. 첫 정수 N을 입력받아 전체 날짜의 수를 배열 a_arr에 입력받는다.
 			// 2. 두번째 정수 K는 합을 구하기 위한 연속적인 수를 입력받는다.
-			// 3. 전체 반복을 N-K식을 이용해서 총 반복 횟수를 정해준다.
+			// 3. 전체 반복을 N-K+1식을 이용해서 총 반복 횟수를 정해준다.
 			 * N = 10일때 K일의 온도의 합이 최대가 될경우 반복횟수 
 			 * 2 = 9
 			 * 3 = 8
@@ -60,31 +60,29 @@ public class baek_2599 {
 
 		 */
 				
-			Scanner sc = new Scanner(System.in);
+	    Scanner sc = new Scanner(System.in);
 
-			
-			int N = sc.nextInt();
-			int K = sc.nextInt();
-			int[] a_arr = new int[N+1];
-			int max = Integer.MIN_VALUE;
-			
-			// 날짜별 온도 입력받기
-			for(int i = 0; i < N; i++) {
-				a_arr[i] = sc.nextInt();
-			}
-			
-			//연속된 날 계산하기
-			for(int i = 0; i < N-K; i++) {
-				int sum = 0;
-				for(int j = i; j < K+i; j++) {
-					sum += a_arr[j];
+		
+				int N = sc.nextInt();
+				int K = sc.nextInt();
+				int[] a_arr = new int[N];
+				int max = Integer.MIN_VALUE;
+				
+				// 날짜별 온도 입력받기
+				for(int i = 0; i < N; i++) {
+					a_arr[i] = sc.nextInt();
 				}
-				max = Math.max(max, sum);
-			}
-			
-			System.out.println(max);		
-		
-		
+				
+				//연속된 날 계산하기
+				for(int i = 0; i < N-K+1; i++) {
+					int sum = 0;
+					for(int j = i; j < K+i; j++) {
+						sum += a_arr[j];
+					}
+					max = Math.max(max, sum);
+				}
+				
+				System.out.println(max);	
 		
 	}
 }

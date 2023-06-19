@@ -52,27 +52,23 @@ public class baek_2566 {
  */
 		// 행렬 9 X 9 변수지정, 배열 지정
 		Scanner sc = new Scanner(System.in);
-		int M = 9, N = 9;
-		int[][] a_array = new int[9][9];
-		
-		//9 x 9 행렬 정수 입력받기
-		for(int i = 0; i < M; i++) {
-			for(int j = 0; j < N; j++) {
-				a_array[i][j] = sc.nextInt();
-			}
-		}
-		
+		int[][] a_array = new int[10][10];
 		int max = 0;
 		int x = 0, y = 0;
+		
+		//9 x 9 행렬 정수 입력받기
 		//최대값, 인덱스 X Y 값 찾기
-		for(int i = 0; i < M; i++) {
-			for(int j = 0; j < N; j++) {
-				if(a_array[i][j] > max) max = a_array[i][j]; y = i+1; x = j+1;
+		for(int i = 0; i < 9; i++) {
+			for(int j = 0; j < 9; j++) {
+				a_array[i][j] = sc.nextInt();
+				if(a_array[i][j] > max) {
+                    max = a_array[i][j]; x = i;  y = j;
+				}
 			}
 		}
 		
 		System.out.println(max);
-		System.out.println(y + " " + x);
+		System.out.println((x+1) + " " + (y+1));
 	
 
 	}
