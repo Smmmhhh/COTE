@@ -1,8 +1,12 @@
 package DO_IT.ARRAY;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class baek_10798 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
 		
 /*
 <문제>
@@ -48,7 +52,37 @@ Aa0aPAf985Bz1EhCz2W3D1gkD6x
 
 
  */
+		
+		
+		//변수 및 배열 선언
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
+		
+		String str;	//사용자가 입력할 스트링형 변수
+		char[][] t_arr = new char[5][15];	//사용자가 입력한 문자열을 한글자씩 자른 뒤 저장하는 배열 선언
+		int length = 0;
+		
+		// 문자열 입력받고 한글자씩 잘라서 t_arr배열에 저장
+		for(int i= 0; i < 5; i++) {
+			str = br.readLine();
+			if(t_arr.length > length) length = t_arr.length;
+				
+			for(int j = 0; j < str.length(); j++) {
+				t_arr[i][j] = str.charAt(j);
+				}	
+			}
 
+		
+		// t_arr에 저장되어있는 값 출력
+		for(int i = 0; i < length; i++) {
+			for(int j = 0; j < 5; j++) {
+				if(t_arr[j][i] == '\0') continue;
+				sb.append(t_arr[j][i]);
+			}
+			
+		}
+		System.out.println(sb);
+			
 	}
 
 }
