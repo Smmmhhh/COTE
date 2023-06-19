@@ -1,4 +1,4 @@
-package DO_IT.ARRAY;
+package DO_IT.Baek;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

@@ -1,4 +1,4 @@
-package DO_IT.ARRAY;
+package DO_IT.Baek;
 
 public class Running_Time_Test {
 
