@@ -2,7 +2,7 @@ package DO_IT.ARRAY;
 
 import java.util.Scanner;
 
-public class baek_2599 {
+public class baek_2559 {
 	public static void main(String[] args) {
 		
 		/*
