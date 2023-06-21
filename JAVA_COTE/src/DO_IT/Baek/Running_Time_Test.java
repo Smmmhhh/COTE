@@ -11,7 +11,7 @@ public class Running_Time_Test {
 		int[][] time2_arr = new int[10001][10001];
 			
 		int count = 0;
-		
+	/*	
 		for(int i = 0; i < 2; i++) {
 			for(int j = 0; j < 10000; j++) {
 				for(int j2 = 0; j2 < 10000; j2++) {
@@ -21,10 +21,10 @@ public class Running_Time_Test {
 			}
 			count = 0;
 				
-		}
+		}*/
 		
 
-/*		
+		
 		for(int j = 0; j < 10000; j++) {
 			for(int j2 = 0; j2 < 10000; j2++) {
 				time_arr[j][j2] = count++;
@@ -38,7 +38,7 @@ public class Running_Time_Test {
 				time2_arr[j][j2] = count++;
 			}
 		}
-*/		
+
 		
 		
 

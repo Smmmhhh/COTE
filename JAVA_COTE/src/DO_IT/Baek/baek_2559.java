@@ -40,7 +40,7 @@ public class baek_2559 {
 		첫째 줄에는 입력되는 온도의 수열에서 연속적인 K일의 온도의 합이 최대가 되는 값을 출력한다.
 
 		<예제입력>
-		10 2
+		10 3
 		3 -2 -4 -9 0 3 7 13 8 -3
 
 		<출력>
@@ -66,6 +66,9 @@ public class baek_2559 {
 				int N = sc.nextInt();
 				int K = sc.nextInt();
 				int[] a_arr = new int[N];
+				
+				
+				
 				int max = Integer.MIN_VALUE;
 				
 				// 날짜별 온도 입력받기

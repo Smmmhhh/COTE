@@ -37,7 +37,7 @@ public class baek_1806 {
 	
 	long N, S;
 	N = sc.nextLong();	S = sc.nextLong();
-	long[] a_arr = new long[(int) N + 1];
+	long[] a_arr = new long[(int) N];
 	
 	//N만큼의 수열을 a_arr에 입력받는다.
 	for(int i = 0; i < N; i++) {
@@ -54,21 +54,21 @@ public class baek_1806 {
 	int min = Integer.MAX_VALUE;
 	
 	while(end <= N) {
-		//sum이 입력받은 최댓값보다 작다면 배열의 값을 하나씩 올려주며 end변수에 넣어준다.
-		if(sum < S) {
-			sum = sum + a_arr[end++];	
-		}else if(sum >= S) {
+
+		if(sum >= S) {
 			sum = sum - a_arr[start++];		//최소길이를 찾기 위해서 배열값을 하나씩 올리며 sum에서 값을 빼줌
 			length = end - start + 1;	//end에서 start를 빼줘서 길이값을 구한다.(문제에서 index는 1을 기준으로 보고있음) 
-			if(min > length) min = length;
+			if(min > length) min = length;	
+			
+		}else if(sum < S) {
+			//sum이 입력받은 최댓값보다 작다면 배열의 값을 하나씩 올려주며 end변수에 넣어준다.			
+			sum = sum + a_arr[end++];
 		}			
 	}
 	
 	System.out.println(min);
 	
 
-	
-		
 	}
 
 }
