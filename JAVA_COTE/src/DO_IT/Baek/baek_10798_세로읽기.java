@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-public class baek_10798 {
+public class baek_10798_세로읽기 {
 
 	public static void main(String[] args) throws IOException{
 		

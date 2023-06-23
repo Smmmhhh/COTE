@@ -2,7 +2,7 @@ package DO_IT.Baek;
 
 import java.util.Scanner;
 
-public class baek_2559 {
+public class baek_2559_수열 {
 	public static void main(String[] args) {
 		
 		/*

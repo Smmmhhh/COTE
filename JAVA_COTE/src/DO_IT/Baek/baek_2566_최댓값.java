@@ -1,7 +1,7 @@
 package DO_IT.Baek;
 import java.util.Scanner;
 
-public class baek_2566 {
+public class baek_2566_최댓값 {
 
 	public static void main(String[] args) {
 		

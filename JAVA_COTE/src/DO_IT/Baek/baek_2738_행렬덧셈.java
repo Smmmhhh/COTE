@@ -1,7 +1,7 @@
 package DO_IT.Baek;
 import java.util.Scanner;
 
-public class baek_2738 {
+public class baek_2738_행렬덧셈 {
 
 	public static void main(String[] args) {
 

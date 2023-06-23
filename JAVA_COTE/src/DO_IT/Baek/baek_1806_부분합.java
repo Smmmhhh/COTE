@@ -2,7 +2,7 @@ package DO_IT.Baek;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class baek_1806 {
+public class baek_1806_부분합 {
 
 	public static void main(String[] args) {
 		
