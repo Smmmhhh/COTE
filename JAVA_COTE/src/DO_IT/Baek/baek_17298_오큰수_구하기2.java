@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Stack;
 import java.util.Scanner;
 
-public class baek_17298_오큰수_구하기 {
+public class baek_17298_오큰수_구하기2 {
 
 	public static void main(String[] args) throws IOException{
 		
@@ -39,9 +39,7 @@ public class baek_17298_오큰수_구하기 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		Scanner sc = new Scanner(System.in);
 		int N = Integer.parseInt(br.readLine());
-		int[] A = new int[N];	//입력받은 배열
-		int[] B = new int[N];	//결과 배열
-		
+		int[] A = new int[N];
 		String[] input = br.readLine().split(" ");
 		//수열 입력받기
 		for(int i = 0; i < N; i++) {
@@ -53,28 +51,33 @@ public class baek_17298_오큰수_구하기 {
 		//스택 지정
 		Stack<Integer> stack = new Stack <Integer>();		
 		StringBuilder sb = new StringBuilder();
-		
-		//초기값 스택에 넣어주기
-		
-		for(int i = 0; i < N; i++) {
-			
-			while(!stack.empty() && (A[stack.peek()] < A[i])) {
-				
-				B[stack.pop()] = A[i];
-			}
-			
-			stack.push(i);
-		}
-		
-		while(!stack.empty()) {
-			B[stack.pop()] = -1;
-		}
-		
-		//결과 배열 출력
-		for(int i = 0; i < N; i++) {
-			System.out.print(B[i] + " ");
-		}
-		
+		int num;
+		boolean result = false;
+		//스택 알고리즘
+		 for(int i = 0; i < A.length; i++) {
+			 
+			 //처음 i값을 stack에 넣어준다.
+			 
+			 stack.push(A[i]);
+			 for(int j = i; j < A.length; j++) {
+				 num = A[j];
+				 // 스택에 첫 요소와 배열의 요소들을 하나씩 비교
+				 // 만약 값이 같으면 j 변수 반복문 종료
+				 int k = stack.peek();
+				 if(k < num){
+					 sb.append(num + " ");
+					 result = true;
+					 break;
+				 // j 반복문이 끝났는데도 더 큰값이 없다면 -1저장
+				 }else if(j >= A.length-1 && !result) {
+					 sb.append(-1 + " ");
+				 }
+			 }
+			 stack.clear();
+			 result = false;
+ 
+		 }	
+		 System.out.println(sb);
 	}
 
 }
