@@ -37,7 +37,6 @@ public class baek_17298_오큰수_구하기 {
 		
 		//수열의 크기 및 수열의 크기로 배열지정
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		Scanner sc = new Scanner(System.in);
 		int N = Integer.parseInt(br.readLine());
 		int[] A = new int[N];	//입력받은 배열
 		int[] B = new int[N];	//결과 배열
@@ -72,9 +71,9 @@ public class baek_17298_오큰수_구하기 {
 		
 		//결과 배열 출력
 		for(int i = 0; i < N; i++) {
-			System.out.print(B[i] + " ");
+			sb.append(B[i]).append(' ');
 		}
-		
+		System.out.println(sb);
 	}
 
 }
