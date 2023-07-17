@@ -71,17 +71,24 @@ Aa0aPAf985Bz1EhCz2W3D1gkD6x
 				t_arr[i][j] = str.charAt(j);
 				}	
 			}
-
-		
-		// t_arr에 저장되어있는 값 출력, i의 값에따라 j 
-		for(int i = 0; i < max; i++) {
-			for(int j = 0; j < 5; j++) {
-				if(t_arr[j][i] == '\0') continue;
-				sb.append(t_arr[j][i]);
+		for(int i= 0; i < 5; i++) {
+			for(int j = 0; j < 15; j++) {
+				System.out.print(t_arr[i][j]);
+				}	
+			System.out.println();
 			}
-			
-		}
-		System.out.println(sb);
+		
+		
+		
+//		// t_arr에 저장되어있는 값 출력, i의 값에따라 j 
+//		for(int i = 0; i < max; i++) {
+//			for(int j = 0; j < 5; j++) {
+//				if(t_arr[j][i] == '\0') continue;
+//				sb.append(t_arr[j][i]);
+//			}
+//			
+//		}
+//		System.out.println(sb);
 			
 	}
 
